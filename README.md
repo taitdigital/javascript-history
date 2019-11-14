@@ -32,7 +32,7 @@ Disclaimer: not 100% historically accurate but enough to get the gist
 
 ---
 
-@todo fix asset path in polymer build
-@todo get dojo templates working
-@todo fix asset path in react build
-@todo add history and author credits for each framework
+- @todo fix asset path in polymer build
+- @todo get dojo templates working
+- @todo fix asset path in react build
+- @todo add history and author credits for each framework
