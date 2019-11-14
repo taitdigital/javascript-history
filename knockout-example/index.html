@@ -1,0 +1,48 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+	<head>
+	  <meta charset="utf-8">
+	  <title></title>
+	  <meta name="description" content="">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	  <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/vendor/knockout.js"></script>
+    <script src="js/vendor/ko-mapping.js"></script>
+    <script src="js/vendor/require.js"></script>
+    <script src="js/main.js"></script>
+	</head>
+
+	<body>
+      <h1>KnockoutJS Example</h1>
+      <div data-bind="with: requestViewModel">
+        <button id="button" data-bind="click: makeRequest">Get Data</button>
+      </div>
+      <div data-bind="with: responseViewModel">
+        <!-- ko if: response -->
+        <div id="output">
+          <ul>
+            <li>
+              <strong>glossary > title:</strong>
+              <span data-bind="text: response().glossary.title"></span>
+            </li>
+            <li>
+              <strong>glossary > GlossDiv > GlossList > GlossEntry > GlossDef > para:</strong>
+              <span data-bind="text: response().glossary.GlossDiv.GlossList.GlossEntry.GlossDef.para"></span>
+            </li>
+            <li>
+                <strong>glossary > GlossDiv > GlossList > GlossEntry > GlossDef > GlossSeeAlso: </strong>
+                <!-- ko foreach: response().glossary.GlossDiv.GlossList.GlossEntry.GlossDef.GlossSeeAlso -->
+                  <span data-bind="text: $data"></span>
+                <!-- /ko -->
+            </li>
+          </ul>
+        </div>
+        <!-- /ko -->
+      </div>
+	</body>
+
+</html>

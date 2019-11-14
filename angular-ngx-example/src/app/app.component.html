@@ -1,0 +1,9 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<button id="button" (click)="makeRequest($event)">Get Data</button>
+<code id="output" *ngIf="data">
+  <div *ngFor="let item of data">
+    {{item}}
+  </div>
+</code>
+
+

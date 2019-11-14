@@ -1,0 +1,52 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="ajax-component">
+  <template>
+    <h1>Polymer Example</h1>
+
+    <button id="button" on-tap="requestData">Get Data</button>
+    <code id="output"></code>
+
+    <div>
+      <ul >
+        <template is="dom-repeat" items="{{data}}">
+            <li>{{item}}</li>
+        </template> 
+      </ul>
+    </div>
+  </template>
+  
+  <script>
+    Polymer({
+      is: "ajax-component",
+      requestData: function() {
+        const self = this;
+
+        async function wrapper() {
+          const resArray = [];
+          const response = await fetch('http://localhost/frontend-frameworks/data/data.json');      
+          const json = await response.json();
+         
+          const iterate = (obj) => {
+            Object.entries(obj).forEach(([key, value]) => {
+              if (obj.hasOwnProperty(key)) {
+                resArray.push(`${key}: ${value}`);
+
+                if (typeof value === 'object') {
+                  iterate(value)
+                }
+              }
+            });
+          };
+
+          iterate(json);
+
+          self.data = resArray;
+        }
+
+        wrapper();
+      },
+      data: {}
+    });
+  </script>
+</dom-module>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+	<head>
+	  <meta charset="utf-8">
+	  <title></title>
+	  <meta name="description" content="">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	  <link rel="stylesheet" href="css/normalize.css">
+	  <link rel="stylesheet" href="css/main.css">
+	</head>
+
+	<body>
+      <h1>Vue / Axios Example</h1>
+      <div id="app">
+          <button id="button" v-on:click="makeRequest">Get Data</button>
+
+          <div id="output">
+              <ul>
+                  <li v-for="data in info">
+                    {{ data }}
+                  </li>
+              </ul>
+
+            </div>
+      </div>
+
+
+      <script src="js/vendor/axios.js"></script>
+      <script src="js/vendor/vue.js"></script>
+      <script src="js/main.js"></script>
+	</body>
+
+</html>

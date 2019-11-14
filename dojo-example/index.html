@@ -1,0 +1,39 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+	<head>
+	  <meta charset="utf-8">
+	  <title></title>
+	  <meta name="description" content="">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	  <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+	</head>
+
+	<body>
+    <h1>Dojo Example</h1>
+
+    <button id="button">Get Data</button>
+    <code id="output"></code>
+
+
+    <div data-dojo-type="dojox.dtl.Inline" id="inline" data-dojo-props="context:{items: ['apple', 'banana', 'orange']}">
+        <ul>
+          {% for item in items %}
+            <li>undefined</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+
+
+    <script src="js/vendor/dojo/dojo.js" data-dojo-config="async: true"></script>
+
+	  <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+	</body>
+
+</html>
