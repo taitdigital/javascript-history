@@ -6,9 +6,10 @@ when a user interaction takes place, make an xhr request and display the reponse
 The goal is to help developers and stakeholders understand and pick the appropriate frontend technology for their projects using a fact based approach rather than individual developer preference.
 
 Disclaimer: not 100% historically accurate but enough to get the gist
----
 
-##Covers:
+
+## Covers:
+---
 
 - JavaScript - Netscape Communications, 1995
 
