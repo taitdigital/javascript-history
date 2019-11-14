@@ -1,15 +1,14 @@
 ### A brief history of Javascript
-
+---
 A simple set of projects that demonstrate the core problems Javascript has been trying to solve since it's conception;
 when a user interaction takes place, make an xhr request and display the reponse data on a page without refresh or forced navigation.
 
 The goal is to help developers and stakeholders understand and pick the appropriate frontend technology for their projects using a fact based approach rather than individual developer preference.
 
 Disclaimer: not 100% historically accurate but enough to get the gist
-
-
-## Covers:
 ---
+
+## Covers
 
 - JavaScript - Netscape Communications, 1995
 
